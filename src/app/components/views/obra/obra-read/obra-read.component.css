@@ -1,0 +1,37 @@
+.content{
+    width: 80%;
+    margin: 1.4rem auto;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.title h1 {
+    font-size: 2rem;
+    color: #123456;
+    font-weight: 500;
+}
+
+.prazo{
+    padding: 2rem;
+}
+
+button{
+    margin-bottom: .8rem;
+    color: green;
+}
+
+.table {
+    width: 100%;
+}
+
+
+.mat-header{
+    width: 5rem;
+}
+.delete{
+    margin-left: 0.6rem;
+    color: rgb(228, 56, 56);
+}

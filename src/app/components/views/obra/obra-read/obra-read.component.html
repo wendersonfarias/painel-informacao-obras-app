@@ -1,0 +1,63 @@
+<div class="content">
+
+    <div class="title">
+        <h1>Obras</h1>
+    </div>
+
+    <button class="mat-elevation-z5 content-table" mat-raised-button color="green">Nova Obra</button>
+
+    <div class="mat-elevation-z5 content-table">
+        <table class="table" mat-table [dataSource]="obras">
+
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="nomeObra">
+              <th mat-header-cell *matHeaderCellDef> OBRA </th>
+              <td mat-cell *matCellDef="let row"> {{row.nomeObra}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="numeroContrato">
+              <th mat-header-cell *matHeaderCellDef> Contrato </th>
+              <td mat-cell *matCellDef="let row"> {{row.numeroContrato}} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="empresaExecutora">
+              <th mat-header-cell *matHeaderCellDef> Empresa </th>
+              <td mat-cell *matCellDef="let row"> {{row.empresaExecutora}} </td>
+            </ng-container>
+    
+             <!-- Symbol Column -->
+             <ng-container matColumnDef="valorExecucaoObra">
+                <th mat-header-cell *matHeaderCellDef> Valor obra </th>
+                <td mat-cell *matCellDef="let row"> {{row.valorExecucaoObra}} </td>
+              </ng-container>
+    
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="prazoExecucao">
+                <th mat-header-cell *matHeaderCellDef> Prazo de Execução </th>
+                <td class="prazo"mat-cell *matCellDef="let row"> {{row.prazoExecucao}} </td>
+              </ng-container>
+
+              <!-- Symbol Column -->
+            <ng-container matColumnDef="acoes">
+              <th class="mat-header" mat-header-cell *matHeaderCellDef> AÇÕES </th>
+              <td mat-cell *matCellDef="let row"> 
+                <a href="#">
+                    <i class="material-icons">edit</i>
+                </a> 
+                <a class="delete" href="#">
+                  <i class="material-icons">delete</i>
+              </a> 
+              </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </div>
+    
+      
+
+</div>

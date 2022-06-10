@@ -1,0 +1,22 @@
+.footer{
+    background: #000444;
+    background: -moz-linear-gradient(left,#000444 0,#1d357f 40%,#1d357f 60%,#000444 100%);
+    background: -webkit-gradient(linear,left top,right top,color-stop(0%,#000444),color-stop(40%,#1d357f),color-stop(60%,#1d357f),color-stop(100%,#000444));
+    background: -webkit-linear-gradient(left,#000444 0,#1d357f 40%,#1d357f 60%,#000444 100%);
+    background: -o-linear-gradient(left,#000444 0,#1d357f 40%,#1d357f 60%,#000444 100%);
+    background: -ms-linear-gradient(left,#000444 0,#1d357f 40%,#1d357f 60%,#000444 100%);
+    background: linear-gradient(to right,#000444 0,#1d357f 40%,#1d357f 60%,#000444 100%);
+    padding:2.1rem;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    bottom: 0; /* stick to bottom */
+    left: 0;
+    color: #FFFFFF;
+    height:40px;
+    z-index: 1;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    
+}
