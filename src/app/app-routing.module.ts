@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/views/home/home.component';
+import { ObraCreateComponent } from './components/views/obra/obra-create/obra-create.component';
 import { ObraReadComponent } from './components/views/obra/obra-read/obra-read.component';
 
 const routes: Routes = [
@@ -12,7 +13,10 @@ const routes: Routes = [
     path: 'obras',
     component: ObraReadComponent
   },
-
+  {
+    path: 'obras/create',
+    component: ObraCreateComponent
+  }
 ];
 
 @NgModule({

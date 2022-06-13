@@ -20,9 +20,10 @@ import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from "@angular/forms"
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { ObraCreateComponent } from './components/views/obra/obra-create/obra-create.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, ObraReadComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, ObraReadComponent, ObraCreateComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

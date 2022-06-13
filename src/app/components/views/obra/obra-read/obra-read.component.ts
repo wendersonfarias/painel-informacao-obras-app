@@ -12,9 +12,9 @@ export class ObraReadComponent implements OnInit {
 
   obras: Obra[] = []
 
-  displayedColumns: string[] = [ 'nomeObra', 'numeroContrato', 'empresaExecutora', 'valorExecucaoObra','prazoExecucao','acoes'];
+  displayedColumns: string[] = [ 'nomeObra', 'numeroContrato', 'empresaExecutora','nomeFiscal','processo', 'valorExecucaoObra','qtdAditivoPrazo','qtdAditivoValor','prazoExecucao','acoes'];
   
-  constructor(private service: ObraService) { }
+  constructor(private service: ObraService, private router:Router) { }
 
   ngOnInit(): void {
     this.findAll();
@@ -27,5 +27,7 @@ export class ObraReadComponent implements OnInit {
   }
 
 
-  
+  navegarParaObraCreate(){
+    this.router.navigate(["obras/create"])
+  }
 }

@@ -4,7 +4,7 @@
         <h1>Obras</h1>
     </div>
 
-    <button class="mat-elevation-z5 content-table" mat-raised-button color="green">Nova Obra</button>
+    <button class="mat-elevation-z5" (click)="navegarParaObraCreate()"  mat-raised-button color="green"> Nova Obra</button>
 
     <div class="mat-elevation-z5 content-table">
         <table class="table" mat-table [dataSource]="obras">
@@ -28,12 +28,36 @@
               <td mat-cell *matCellDef="let row"> {{row.empresaExecutora}} </td>
             </ng-container>
     
+            <!-- Name Column -->
+            <ng-container matColumnDef="nomeFiscal">
+              <th mat-header-cell *matHeaderCellDef> Fiscal </th>
+              <td mat-cell *matCellDef="let row"> {{row.nomeFiscal}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="processo">
+              <th mat-header-cell *matHeaderCellDef> Processo </th>
+              <td mat-cell *matCellDef="let row"> {{row.processo}} </td>
+            </ng-container>
+
              <!-- Symbol Column -->
              <ng-container matColumnDef="valorExecucaoObra">
                 <th mat-header-cell *matHeaderCellDef> Valor obra </th>
                 <td mat-cell *matCellDef="let row"> {{row.valorExecucaoObra}} </td>
               </ng-container>
+
+              <!-- Symbol Column -->
+             <ng-container matColumnDef="qtdAditivoPrazo">
+              <th mat-header-cell *matHeaderCellDef> Qtd Aditivo Prazo </th>
+              <td mat-cell *matCellDef="let row"> {{row.qtdAditivoPrazo}} </td>
+            </ng-container>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="qtdAditivoValor">
+              <th mat-header-cell *matHeaderCellDef> Qtd Aditivo Valor </th>
+              <td mat-cell *matCellDef="let row"> {{row.qtdAditivoValor}} </td>
+            </ng-container>
     
+
             <!-- Symbol Column -->
             <ng-container matColumnDef="prazoExecucao">
                 <th mat-header-cell *matHeaderCellDef> Prazo de Execução </th>

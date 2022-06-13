@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://paineis-andamento-obras-api.herokuapp.com'
+  baseUrl: 'http://localhost:8080'
 };
 
 /*
