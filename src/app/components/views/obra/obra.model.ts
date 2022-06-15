@@ -3,8 +3,10 @@ export interface Obra{
    nomeObra: String;
    numeroContrato: String;
    empresaExecutora: String;
-   valorExecucaoObra: Number;
-   prazoExecucao: Number;
-
-
+   nomeFiscal: string;
+   processo : string;
+   valorExecucaoObra: number;
+   qtdAditivoPrazo : number;
+   qtdAditivoValor: number;
+   prazoExecucao: number;
 }

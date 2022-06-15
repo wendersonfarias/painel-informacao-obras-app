@@ -12,7 +12,7 @@
           
             <!-- Name Column -->
             <ng-container matColumnDef="nomeObra">
-              <th mat-header-cell *matHeaderCellDef> OBRA </th>
+              <th mat-header-cell *matHeaderCellDef> OBRAS </th>
               <td mat-cell *matCellDef="let row"> {{row.nomeObra}} </td>
             </ng-container>
           
@@ -28,16 +28,10 @@
               <td mat-cell *matCellDef="let row"> {{row.empresaExecutora}} </td>
             </ng-container>
     
-            <!-- Name Column -->
-            <ng-container matColumnDef="nomeFiscal">
-              <th mat-header-cell *matHeaderCellDef> Fiscal </th>
-              <td mat-cell *matCellDef="let row"> {{row.nomeFiscal}} </td>
-            </ng-container>
-
-            <!-- Name Column -->
-            <ng-container matColumnDef="processo">
-              <th mat-header-cell *matHeaderCellDef> Processo </th>
-              <td mat-cell *matCellDef="let row"> {{row.processo}} </td>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="prazoExecucao">
+              <th mat-header-cell *matHeaderCellDef> Prazo de Execução </th>
+              <td class="prazo"mat-cell *matCellDef="let row"> {{row.prazoExecucao}} </td>
             </ng-container>
 
              <!-- Symbol Column -->
@@ -46,36 +40,16 @@
                 <td mat-cell *matCellDef="let row"> {{row.valorExecucaoObra}} </td>
               </ng-container>
 
-              <!-- Symbol Column -->
-             <ng-container matColumnDef="qtdAditivoPrazo">
-              <th mat-header-cell *matHeaderCellDef> Qtd Aditivo Prazo </th>
-              <td mat-cell *matCellDef="let row"> {{row.qtdAditivoPrazo}} </td>
-            </ng-container>
-            <!-- Symbol Column -->
-            <ng-container matColumnDef="qtdAditivoValor">
-              <th mat-header-cell *matHeaderCellDef> Qtd Aditivo Valor </th>
-              <td mat-cell *matCellDef="let row"> {{row.qtdAditivoValor}} </td>
+             <!-- Symbol Column -->
+             <ng-container matColumnDef="valorLiberado">
+              <th mat-header-cell *matHeaderCellDef> Valor Liberado </th>
+              <td mat-cell *matCellDef="let row"> {{row.valorLiberado}} </td>
             </ng-container>
     
 
-            <!-- Symbol Column -->
-            <ng-container matColumnDef="prazoExecucao">
-                <th mat-header-cell *matHeaderCellDef> Prazo de Execução </th>
-                <td class="prazo"mat-cell *matCellDef="let row"> {{row.prazoExecucao}} </td>
-              </ng-container>
+            
 
               <!-- Symbol Column -->
-            <ng-container matColumnDef="acoes">
-              <th class="mat-header" mat-header-cell *matHeaderCellDef> AÇÕES </th>
-              <td mat-cell *matCellDef="let row"> 
-                <a href="#">
-                    <i class="material-icons">edit</i>
-                </a> 
-                <a class="delete" href="#">
-                  <i class="material-icons">delete</i>
-              </a> 
-              </td>
-            </ng-container>
           
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

@@ -17,5 +17,10 @@ export class ObraService {
       const url = `${this.baseUrl}/obras`
       return this.http.get<Obra[]>(url)
   }
+
+  create(obra: Obra): Observable<Obra>{
+    const url = `${this.baseUrl}/obras`
+    return this.http.post<Obra>(url, obra);
+  }
    
 }
