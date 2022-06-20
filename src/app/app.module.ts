@@ -22,9 +22,10 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ObraCreateComponent } from './components/views/obra/obra-create/obra-create.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ObraDeleteComponent } from './components/views/obra/obra-delete/obra-delete.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, ObraReadComponent, ObraCreateComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, ObraReadComponent, ObraCreateComponent, ObraDeleteComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

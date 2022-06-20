@@ -12,7 +12,7 @@ export class ObraReadComponent implements OnInit {
 
   obras: Obra[] = []
 
-  displayedColumns: string[] = [ 'nomeObra', 'numeroContrato', 'empresaExecutora','prazoExecucao', 'valorExecucaoObra','valorLiberado'];
+  displayedColumns: string[] = [ 'nomeObra', 'numeroContrato', 'empresaExecutora','prazoExecucao', 'valorExecucaoObra','valorLiberado', 'acoes'];
   
   constructor(private service: ObraService, private router:Router) { }
 

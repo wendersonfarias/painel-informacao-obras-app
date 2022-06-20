@@ -19,12 +19,20 @@ export class ObraService {
       return this.http.get<Obra[]>(url)
   }
 
+  findById(id: String) :Observable<Obra> {
+    const url = `${this.baseUrl}/obras/${id}`
+    return this.http.get<Obra>(url)
+  }
+
   create(obra: Obra): Observable<Obra>{
     const url = `${this.baseUrl}/obras`
     return this.http.post<Obra>(url, obra);
   }
    
-
+  delete(id: String):Observable<void> {
+    const url = `${this.baseUrl}/obras/${id}`
+    return this.http.delete<void>(url)
+  }
 
   mensagem(str: String): void {
     this._snack.open(`${str}`, "OK", {
