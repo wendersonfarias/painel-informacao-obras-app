@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Obra} from './obra.model'
@@ -11,7 +12,7 @@ export class ObraService {
 
   baseUrl: String = environment.baseUrl;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private _snack: MatSnackBar) {}
 
   findAll(): Observable<Obra[]>{
       const url = `${this.baseUrl}/obras`
@@ -23,4 +24,15 @@ export class ObraService {
     return this.http.post<Obra>(url, obra);
   }
    
+
+
+  mensagem(str: String): void {
+    this._snack.open(`${str}`, "OK", {
+      horizontalPosition: 'end',
+      verticalPosition: 'top',
+      duration: 3000
+    })
+  }
+
+
 }

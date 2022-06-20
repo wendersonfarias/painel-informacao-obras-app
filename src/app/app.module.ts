@@ -21,6 +21,7 @@ import { FormsModule } from "@angular/forms"
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ObraCreateComponent } from './components/views/obra/obra-create/obra-create.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, ObraReadComponent, ObraCreateComponent],
@@ -39,6 +40,7 @@ import { ObraCreateComponent } from './components/views/obra/obra-create/obra-cr
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
