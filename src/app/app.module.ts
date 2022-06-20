@@ -23,9 +23,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { ObraCreateComponent } from './components/views/obra/obra-create/obra-create.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ObraDeleteComponent } from './components/views/obra/obra-delete/obra-delete.component';
+import { ObraUpdateComponent } from './components/views/obra/obra-update/obra-update.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { ObraVisualizaComponent } from './components/views/obra/obra-visualiza/obra-visualiza.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, ObraReadComponent, ObraCreateComponent, ObraDeleteComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, ObraReadComponent, ObraCreateComponent, ObraDeleteComponent, ObraUpdateComponent, ObraVisualizaComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -42,6 +45,7 @@ import { ObraDeleteComponent } from './components/views/obra/obra-delete/obra-de
     MatInputModule,
     MatFormFieldModule,
     MatSnackBarModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent],

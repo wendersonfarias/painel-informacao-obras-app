@@ -12,7 +12,7 @@ export class ObraReadComponent implements OnInit {
 
   obras: Obra[] = []
 
-  displayedColumns: string[] = [ 'nomeObra', 'numeroContrato', 'empresaExecutora','prazoExecucao', 'valorExecucaoObra','valorLiberado', 'acoes'];
+  displayedColumns: string[] = [ 'abrir','nomeObra', 'numeroContrato', 'empresaExecutora','prazoExecucao', 'valorExecucaoObra','valorLiberado', 'acoes'];
   
   constructor(private service: ObraService, private router:Router) { }
 
@@ -22,12 +22,15 @@ export class ObraReadComponent implements OnInit {
 
   findAll(){
     this.service.findAll().subscribe(resposta => {
-      console.log(resposta)
       this.obras = resposta});
   }
 
 
   navegarParaObraCreate(){
     this.router.navigate(["obras/create"])
+  }
+
+  visualiza(str: String){
+    this.router.navigate(["obras/visualiza/{id}"])
   }
 }

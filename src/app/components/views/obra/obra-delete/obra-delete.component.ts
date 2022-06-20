@@ -32,7 +32,6 @@ export class ObraDeleteComponent implements OnInit {
   findById(): void {
     this.service.findById(this.obra.id!).subscribe((resposta) => {
       this.obra = resposta
-      console.log(this.obra)
     })
   }
   
