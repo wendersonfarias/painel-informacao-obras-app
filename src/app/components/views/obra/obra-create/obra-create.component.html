@@ -13,33 +13,36 @@
                 <!-- Input Nome da obra -->
                 <mat-form-field class="form">
                     <mat-label>Nome da obra</mat-label>
-                    <input matInput [(ngModel)]="obra.nomeObra" id="nome" type="text" required name="nome" placeholder="Ex. obra da sesp" 
-                                    title="Preencha o campo Nome"
-                                    required name=nome/>
+                    <input matInput [formControl]="nome" required [(ngModel)]="obra.nomeObra" id="nome" type="text" name="nome" placeholder="Ex. obra da sesp" maxlength="100">
+                    <mat-error *ngIf=nome.invalid> {{ getMessage() }} </mat-error>
                 </mat-form-field>
 
                 <!-- Input Numero de Contrato -->
                 <mat-form-field class="form">
                     <mat-label>Numero de Contrato</mat-label>
-                    <input matInput [(ngModel)]="obra.numeroContrato" type="text" required name="contrato" placeholder="Ex. 1121/2009">
+                    <input matInput [formControl]="contrato" required [(ngModel)]="obra.numeroContrato" type="text" required name="contrato" placeholder="Ex. 1121/2009" maxlength="100">
+                    <mat-error *ngIf=contrato.invalid> {{ getMessage() }} </mat-error>
                 </mat-form-field>
 
                 <!-- Input Empresa Executora -->
                 <mat-form-field class="form">
                     <mat-label>Empresa Executora</mat-label>
-                    <input matInput [(ngModel)]="obra.empresaExecutora" type="text" required name="empresa" placeholder="Ex. Constru Paulo">
+                    <input matInput matInput [formControl]="empresa" [(ngModel)]="obra.empresaExecutora" type="text" required name="empresa" placeholder="Ex. Constru Paulo" maxlength="100">
+                    <mat-error *ngIf=empresa.invalid> {{ getMessage() }} </mat-error>
                 </mat-form-field>
 
                 <!-- Input Fiscal -->
                 <mat-form-field class="form">
                     <mat-label>Fiscal</mat-label>
-                    <input matInput [(ngModel)]="obra.nomeFiscal" type="text" required name="Fiscal" placeholder="Ex. Mirosvaldo">
+                    <input matInput [formControl]="fiscal" [(ngModel)]="obra.nomeFiscal" type="text" required name="Fiscal" placeholder="Ex. Mirosvaldo"  maxlength="100">
+                    <mat-error *ngIf=fiscal.invalid> {{ getMessage() }} </mat-error>
                 </mat-form-field>
 
                 <!-- Input Processo -->
                 <mat-form-field class="form">
                     <mat-label>Processo</mat-label>
-                    <input matInput [(ngModel)]="obra.processo"  type="text" required name="processo" placeholder="Ex. sesp-pro-000/000">
+                    <input matInput [formControl]="processo" [(ngModel)]="obra.processo"  type="text" required name="processo" placeholder="Ex. sesp-pro-000/000">
+                    <mat-error *ngIf=processo.invalid> {{ getMessage() }} </mat-error>
                 </mat-form-field>
 
                 <!-- Input Valor de Execução da Obra -->
@@ -71,7 +74,7 @@
                    
                 <!--Botões-->
                 <div class="buttons">
-                    <button (click)="create()"  mat-raised-button color="primary"> CRIAR </button>
+                    <button [disabled]="getMessage()"  (click)="create()"  mat-raised-button color="primary"> CRIAR </button>
                     <button (click)="cancelar()" class="mat-elevation-z100"  mat-raised-button color="warn"> CANCELAR </button>
                 </div>
 

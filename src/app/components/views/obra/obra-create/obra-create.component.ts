@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Obra } from '../obra.model';
 import { ObraService } from '../obra.service';
@@ -11,6 +12,7 @@ import { ObraService } from '../obra.service';
 export class ObraCreateComponent implements OnInit {
   
   obra: Obra = {
+    id: "",
     nomeObra: '',
     numeroContrato: '',
     empresaExecutora:'',
@@ -21,6 +23,12 @@ export class ObraCreateComponent implements OnInit {
     qtdAditivoValor: 0,
     prazoExecucao: 0,
   };
+
+  nome =  new FormControl('',[Validators.minLength(3)])
+  contrato =  new FormControl('',[Validators.minLength(3)])
+  empresa =  new FormControl('',[Validators.minLength(2)])
+  fiscal =  new FormControl('',[Validators.minLength(2)])
+  processo =  new FormControl('',[Validators.minLength(3)])
 
   constructor(private service: ObraService, private router: Router) { }
 
@@ -40,5 +48,24 @@ export class ObraCreateComponent implements OnInit {
 
   cancelar() :void{
     this.router.navigate(['obras'])
+  }
+
+  getMessage(){
+    if( this.nome.invalid){
+      return "O campo Nome Da Obra deve ser maior que 3 caracteres"
+    }
+    if( this.contrato.invalid){
+      return "O campo contrato deve ser maior que 3 caracteres"
+    }
+    if( this.empresa.invalid){
+      return "O campo Nome da Empresa deve ser maior que 2 caracteres"
+    }
+    if( this.fiscal.invalid){
+      return "O campo Nome do Fiscal deve ser maior que 2 caracteres"
+    }
+    if( this.processo.invalid){
+      return "O campo processo deve ser maior que 2 caracteres"
+    }
+    return false
   }
 }

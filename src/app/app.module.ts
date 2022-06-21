@@ -17,7 +17,7 @@ import { HomeComponent } from './components/views/home/home.component';
 import {MatTableModule} from '@angular/material/table';
 import { ObraReadComponent } from './components/views/obra/obra-read/obra-read.component';
 import {MatButtonModule} from '@angular/material/button';
-import { FormsModule } from "@angular/forms"
+import { FormsModule, ReactiveFormsModule } from "@angular/forms"
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ObraCreateComponent } from './components/views/obra/obra-create/obra-create.component';
@@ -26,9 +26,12 @@ import { ObraDeleteComponent } from './components/views/obra/obra-delete/obra-de
 import { ObraUpdateComponent } from './components/views/obra/obra-update/obra-update.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { ObraVisualizaComponent } from './components/views/obra/obra-visualiza/obra-visualiza.component';
+import { MedicaoReadAllComponent } from './components/views/medicao/medicao-read-all/medicao-read-all.component';
+import { MedicaoCreateComponent } from './components/views/medicao/medicao-create/medicao-create.component';
+import { MedicaoUpdateComponent } from './components/views/medicao/medicao-update/medicao-update.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, ObraReadComponent, ObraCreateComponent, ObraDeleteComponent, ObraUpdateComponent, ObraVisualizaComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, ObraReadComponent, ObraCreateComponent, ObraDeleteComponent, ObraUpdateComponent, ObraVisualizaComponent, MedicaoReadAllComponent, MedicaoCreateComponent, MedicaoUpdateComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -45,7 +48,8 @@ import { ObraVisualizaComponent } from './components/views/obra/obra-visualiza/o
     MatInputModule,
     MatFormFieldModule,
     MatSnackBarModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

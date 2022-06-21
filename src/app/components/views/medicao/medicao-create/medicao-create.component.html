@@ -1,0 +1,68 @@
+<div class="content">
+    <form>
+
+        <!--Material Card-->
+        <mat-card class="home mat-elevation-z9" id="card">
+            <mat-card-title >
+
+                <!-- Titulo-->
+                <div class="titulo ">
+                    <h1>Criando Nova Medicão</h1>
+                </div>
+
+
+
+                <!-- Input Valor Medido -->
+                <mat-form-field class="form">
+                    <mat-label>Valor Medido</mat-label>
+                    <input matInput [(ngModel)]="medicao.valorMedido" [formControl]="valor" required type="number" name="valor" placeholder="Ex. 9090.52" step="0.01">
+                    <mat-error *ngIf="valor.invalid">{{ getMessage() }}</mat-error>
+                </mat-form-field>
+
+                 <!-- Input Numero da Medição -->
+                 <mat-form-field class="form">
+                    <mat-label>Numero da Medição</mat-label>
+                    <input [(ngModel)]="medicao.numeroMedicao" matInput id="numMed" type="number" required name="numMed" placeholder="Ex. 5" min="0" max="1000">
+                                    
+                </mat-form-field>
+
+                 <!-- Input Valor Medido -->
+                 <mat-form-field class="form">
+                    <mat-label>Mês da Medição</mat-label>
+                    <input matInput [(ngModel)]="medicao.mesMedicao" id="mesMed" type="month" required name="mesMed" min="2015-01" max="2100-12">
+                </mat-form-field>
+
+
+
+                
+                   
+                <!--Botões-->
+                <div class="buttons">
+                    <button  (click)="create()" [disabled]="getMessage()"  mat-raised-button color="primary"> CRIAR </button>
+                    <button (click)="cancelar()" class="mat-elevation-z100"  mat-raised-button color="warn"> CANCELAR </button>
+                </div>
+
+            </mat-card-title>
+                
+            <mat-card-subtitle class="subtitle"><H1></H1></mat-card-subtitle>
+        </mat-card>
+    </form > 
+</div>
+    
+
+    
+
+    
+
+   
+
+    
+
+    
+
+    
+
+    
+
+    
+

@@ -10,6 +10,7 @@ import { ObraService } from "../obra.service";
 })
 export class ObraUpdateComponent implements OnInit {
   obra: Obra = {
+    id:"",
     nomeObra: "",
     numeroContrato: "",
     empresaExecutora: "",

@@ -30,7 +30,4 @@ export class ObraReadComponent implements OnInit {
     this.router.navigate(["obras/create"])
   }
 
-  visualiza(str: String){
-    this.router.navigate(["obras/visualiza/{id}"])
-  }
 }
