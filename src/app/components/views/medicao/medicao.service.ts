@@ -32,6 +32,10 @@ export class MedicaoService {
     const url = `${this.baseUrl}/medicoes?obra=${id_obra}`;
     return this.http.post<Medicao>(url, medicao);
   }
+  delete(id: string) : Observable<void>{
+    const url = `${this.baseUrl}/medicoes/${id}`;
+    return this.http.delete<void>(url)
+  }
 
   mensagem(str: String): void {
     this._snack.open(`${str}`, "OK", {

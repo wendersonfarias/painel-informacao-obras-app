@@ -29,9 +29,10 @@ import { ObraVisualizaComponent } from './components/views/obra/obra-visualiza/o
 import { MedicaoReadAllComponent } from './components/views/medicao/medicao-read-all/medicao-read-all.component';
 import { MedicaoCreateComponent } from './components/views/medicao/medicao-create/medicao-create.component';
 import { MedicaoUpdateComponent } from './components/views/medicao/medicao-update/medicao-update.component';
+import { MedicaoDeleteComponent } from './components/views/medicao/medicao-delete/medicao-delete.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, ObraReadComponent, ObraCreateComponent, ObraDeleteComponent, ObraUpdateComponent, ObraVisualizaComponent, MedicaoReadAllComponent, MedicaoCreateComponent, MedicaoUpdateComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, ObraReadComponent, ObraCreateComponent, ObraDeleteComponent, ObraUpdateComponent, ObraVisualizaComponent, MedicaoReadAllComponent, MedicaoCreateComponent, MedicaoUpdateComponent, MedicaoDeleteComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

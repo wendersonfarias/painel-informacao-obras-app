@@ -7,7 +7,7 @@
 
                 <!-- Titulo-->
                 <div class="titulo ">
-                    <h1>Atualizando Medição</h1>
+                    <h1>Deletando Medição</h1>
                 </div>
 
 
@@ -15,21 +15,21 @@
                 <!-- Input Valor Medido -->
                 <mat-form-field class="form">
                     <mat-label>Valor Medido</mat-label>
-                    <input matInput [(ngModel)]="medicao.valorMedido" [formControl]="valor" required type="number" name="valor" placeholder="Ex. 9090.52" step="0.01">
-                    <mat-error *ngIf="valor.invalid">{{ getMessage() }}</mat-error>
+                    <input matInput [(ngModel)]="medicao.valorMedido" type="number" name="valor" disabled>
+
                 </mat-form-field>
 
                  <!-- Input Numero da Medição -->
                  <mat-form-field class="form">
                     <mat-label>Numero da Medição</mat-label>
-                    <input [(ngModel)]="medicao.numeroMedicao" matInput id="numMed" type="number" required name="numMed" placeholder="Ex. 5" min="0" max="1000">
+                    <input [(ngModel)]="medicao.numeroMedicao" matInput id="numMed" type="number" name="numMed" disabled >
                                     
                 </mat-form-field>
 
                  <!-- Input Valor Medido -->
                  <mat-form-field class="form">
                     <mat-label>Mês da Medição</mat-label>
-                    <input matInput [(ngModel)]="medicao.mesMedicao" id="mesMed" type="month" required name="mesMed" min="2015-01" max="2100-12">
+                    <input matInput [(ngModel)]="medicao.mesMedicao" id="mesMed" type="month" name="mesMed" disabled>
                 </mat-form-field>
 
 
@@ -38,8 +38,8 @@
                    
                 <!--Botões-->
                 <div class="buttons">
-                    <button (click)="update()" [disabled]="getMessage()"  mat-raised-button color="primary"> ATUALIZAR </button>
-                    <button  (click)="cancelar()" class="mat-elevation-z100"  mat-raised-button color="warn"> CANCELAR </button>
+                    <button   (click)="delete()" mat-raised-button color="warn"> DELETAR </button>
+                    <button  (click)="cancelar()" class="mat-elevation-z100"  mat-raised-button  color="primary"> CANCELAR </button>
                 </div>
 
             </mat-card-title>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/views/home/home.component';
 import { MedicaoCreateComponent } from './components/views/medicao/medicao-create/medicao-create.component';
+import { MedicaoDeleteComponent } from './components/views/medicao/medicao-delete/medicao-delete.component';
 import { MedicaoReadAllComponent } from './components/views/medicao/medicao-read-all/medicao-read-all.component';
 import { MedicaoUpdateComponent } from './components/views/medicao/medicao-update/medicao-update.component';
 import { ObraCreateComponent } from './components/views/obra/obra-create/obra-create.component';
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path : 'obras/:id_obra/medicoes/:id/update',
     component: MedicaoUpdateComponent
+  },
+  {
+    path : 'obras/:id_obra/medicoes/:id/delete',
+    component: MedicaoDeleteComponent
   }
 ];
 
