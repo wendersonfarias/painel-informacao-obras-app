@@ -22,6 +22,7 @@ export class ObraCreateComponent implements OnInit {
     qtdAditivoPrazo : 0,
     qtdAditivoValor: 0,
     prazoExecucao: 0,
+    valorLiberado: 0.0,
   };
 
   nome =  new FormControl('',[Validators.minLength(3)])

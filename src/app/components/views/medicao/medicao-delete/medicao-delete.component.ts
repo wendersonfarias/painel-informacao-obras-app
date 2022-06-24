@@ -41,7 +41,6 @@ export class MedicaoDeleteComponent implements OnInit {
       this.router.navigate([`obras/${this.id_obra}/medicoes`]);
       this.service.mensagem("Medição deletada com sucesso!")
     }, err => {
-      console.log(this.medicao)
       this.router.navigate([`obras/${this.id_obra}/medicoes`]);
       this.service.mensagem("Falha ao deletar a Medição! Tente mais tarde...")
     })

@@ -1,25 +1,28 @@
-.content{
+.create{
     width: 90%;
-    margin: 1.4rem auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.title{
-    justify-content: initial;
-    margin-bottom: 2rem;
-}
-
-.title h1 {
+.create h1 {
+    text-align: center;
     font-size: 2rem;
-    color: #123456;
-    font-weight: 500;
 }
-
-.prazo{
-    padding: 2rem;
+.create button{
+    width: 100%;
+    margin: 1rem auto;
+}
+.container{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+table {
+    width: 100%;
+    
 }
 
 button{
-    margin-bottom: .8rem;
     color: green;
 }
 

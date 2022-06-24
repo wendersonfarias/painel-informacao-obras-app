@@ -1,20 +1,24 @@
-<mat-sidenav-container class="container" >
-    <mat-sidenav mode="side" opened>
-        <mat-nav-list>
-            <a routerLink="" mat-list-item> 
-                <i class="material-icons">home</i>
-                Home
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+      
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="">
+                <i class="material-icons">home</i>Home
             </a>
-            <a routerLink="/obras" mat-list-item> 
-                <i class="material-icons">location_city</i>
-                Obras
+            <a mat-list-item routerLink="/obras">
+                <i class="material-icons">store_mall_directory</i>Obras
             </a>
         </mat-nav-list>
 
 
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <router-outlet></router-outlet>
-    </mat-sidenav-content>
-</mat-sidenav-container>
-
+    </mat-drawer>
+  
+    <div class="sidenav-content">
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <router-outlet></router-outlet>
+    </div>
+  
+  </mat-drawer-container>
+  

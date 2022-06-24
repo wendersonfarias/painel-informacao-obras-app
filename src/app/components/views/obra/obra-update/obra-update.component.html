@@ -1,100 +1,88 @@
-<div class="content">
-    <form>
+<form>
+    <h1>Editando Obra</h1>
 
-        <!--Material Card-->
-        <mat-card class="home mat-elevation-z9" id="card">
-            <mat-card-title >
+    <!-- Input Nome da obra -->
+    <mat-form-field class="full-width">
+        <mat-label>Nome da obra</mat-label>
+        <input matInput [formControl]="nome" required [(ngModel)]="obra.nomeObra" id="nome" type="text" name="nome" placeholder="Ex. obra da sesp" maxlength="100">
+        <mat-error *ngIf=nome.invalid> {{ getMessage() }} </mat-error>
+    </mat-form-field>
 
-                <!-- Titulo-->
-                <div class="titulo ">
-                    <h1>ATUALIZANDO OBRA</h1>
-                </div>
+    <!-- Input Numero de Contrato -->
+    <mat-form-field class="full-width">
+        <mat-label>Numero de Contrato</mat-label>
+        <input matInput [formControl]="contrato" required [(ngModel)]="obra.numeroContrato" type="text" required name="contrato" placeholder="Ex. 1121/2009" maxlength="100">
+        <mat-error *ngIf=contrato.invalid> {{ getMessage() }} </mat-error>
+    </mat-form-field>
 
-                <!-- Input Nome da obra -->
-                <mat-form-field class="form">
-                    <mat-label>Nome da obra</mat-label>
-                    <input class="cor" matInput [(ngModel)]="obra.nomeObra" type="text" name="nome" placeholder="Ex. obra da sesp" disabled>
-                </mat-form-field>
+    <!-- Input Empresa Executora -->
+    <mat-form-field class="full-width">
+        <mat-label>Empresa Executora</mat-label>
+        <input matInput matInput [formControl]="empresa" [(ngModel)]="obra.empresaExecutora" type="text" required name="empresa" placeholder="Ex. Constru Paulo" maxlength="100">
+        <mat-error *ngIf=empresa.invalid> {{ getMessage() }} </mat-error>
+    </mat-form-field>
 
-                <!-- Input Numero de Contrato -->
-                <mat-form-field class="form">
-                    <mat-label>Numero de Contrato</mat-label>
-                    <input class="cor" matInput [(ngModel)]="obra.numeroContrato" type="text" name="contrato" placeholder="Ex. 1121/2009" disabled>
-                </mat-form-field>
+    <!-- Input Fiscal -->
+    <mat-form-field class="full-width">
+        <mat-label>Fiscal</mat-label>
+        <input matInput [formControl]="fiscal" [(ngModel)]="obra.nomeFiscal" type="text" required name="Fiscal" placeholder="Ex. Mirosvaldo"  maxlength="100">
+        <mat-error *ngIf=fiscal.invalid> {{ getMessage() }} </mat-error>
+    </mat-form-field>
 
-                <!-- Input Empresa Executora -->
-                <mat-form-field class="form">
-                    <mat-label>Empresa Executora</mat-label>
-                    <input class="cor" matInput [(ngModel)]="obra.empresaExecutora" type="text" name="empresa" placeholder="Ex. Constru Paulo" disabled>
-                </mat-form-field>
+    <!-- Input Processo -->
+    <mat-form-field class="full-width">
+        <mat-label>Processo</mat-label>
+        <input matInput [formControl]="processo" [(ngModel)]="obra.processo"  type="text" required name="processo" placeholder="Ex. sesp-pro-000/000">
+        <mat-error *ngIf=processo.invalid> {{ getMessage() }} </mat-error>
+    </mat-form-field>
 
-                <!-- Input Fiscal -->
-                <mat-form-field class="form">
-                    <mat-label>Fiscal</mat-label>
-                    <input class="corRed" matInput [(ngModel)]="obra.nomeFiscal" type="text" required name="Fiscal" placeholder="Ex. Mirosvaldo" >
-                </mat-form-field>
-
-                <!-- Input Processo -->
-                <mat-form-field class="form">
-                    <mat-label>Processo</mat-label>
-                    <input class="cor" matInput [(ngModel)]="obra.processo"  type="text" name="processo" placeholder="Ex. sesp-pro-000/000" disabled>
-                </mat-form-field>
-
-                <!-- Input Valor de Execução da Obra -->
-                <mat-form-field class="form">
-                    <mat-label>Valor de Execução da Obra</mat-label>
-                    <input class="corRed" matInput [(ngModel)]="obra.valorExecucaoObra" type="number"  name="valor-obra" placeholder="Ex. 9090.52" min="0" step="0.01">
-                </mat-form-field>
-
-                <!-- Input Quantidade de Aditivo de Prazo -->
-                <mat-form-field class="form">
-                    <mat-label>Quantidade de Aditivo de Prazo</mat-label>
-                    <input class="corRed" matInput [(ngModel)]="obra.qtdAditivoPrazo" type="number" name="aditivo-prazo" placeholder="Ex. 3" min="0" max = "1000">
-                </mat-form-field>
-
-                <!-- Input Quantidade de Aditivo de Valor -->
-                <mat-form-field class="form">
-                    <mat-label>Quantidade de Aditivo de Valor</mat-label>
-                    <input class="corRed" matInput [(ngModel)]="obra.qtdAditivoValor" type="number" name="aditivo-valor" placeholder="Ex. 3" min="0" max = "1000">
-                </mat-form-field>
-
-                <!-- Input Prazo de Execução -->
-                <mat-form-field class="form">
-                    <mat-label>Prazo de Execução</mat-label>
-                    <input class="corRed" matInput  [(ngModel)]="obra.prazoExecucao" type="number" name="prazoExecucao" placeholder="Ex. 10" min="0" max = "10000">
-                </mat-form-field>
+    <!-- Input Prazo de Execução -->
+    <mat-form-field class="full-width">
+        <mat-label>Prazo de Execução</mat-label>
+        <input matInput  [(ngModel)]="obra.prazoExecucao" type="number" name="prazoExecucao" placeholder="Ex. 10" min="0" max = "1000">
+    </mat-form-field>
 
 
-                
-                   
-                <!--Botões-->
-                <div class="buttons">
-                    <button (click)="update()"  mat-raised-button color="primary"> ATUALIZAR </button>
-                    <button (click)="cancelar()" class="mat-elevation-z100"  mat-raised-button color="warn"> CANCELAR </button>
-                </div>
+    <!-- Input Quantidade de Aditivo de Prazo -->
+    <mat-form-field class="full-width">
+        <mat-label>Quantidade de Aditivo de Prazo</mat-label>
+        <input matInput [(ngModel)]="obra.qtdAditivoPrazo" type="number" name="aditivo-prazo" placeholder="3" min="0" max = "100">
+    </mat-form-field>
 
-            </mat-card-title>
-                
-            <mat-card-subtitle class="subtitle"><H1></H1></mat-card-subtitle>
-        </mat-card>
-    </form > 
-</div>
-    
+    <!-- Input Quantidade de Aditivo de Valor -->
+    <mat-form-field class="full-width">
+        <mat-label>Quantidade de Aditivo de Valor</mat-label>
+        <input matInput [(ngModel)]="obra.qtdAditivoValor" type="number" name="aditivo-valor" placeholder="3" min="0" max = "100">
+    </mat-form-field>
+
+    <!-- Input Valor de Execução da Obra -->
+    <mat-form-field class="full-width">
+        <mat-label>Valor de Execução da Obra</mat-label>
+        <input matInput [(ngModel)]="obra.valorExecucaoObra" type="number" name="valor-obra" placeholder="0" min="0" step="0.01">
+    </mat-form-field>
+
+    <button class="mat-elevation-z8" mat-stroked-button [disabled]="getMessage()" (click)="update()" color="primary">EDITAR</button>
+    <button class="mat-elevation-z8" mat-stroked-button (click)="cancelar()" color="warn">CANCELAR</button>
+
 
     
 
-    
+</form > 
 
-   
 
-    
 
-    
 
-    
 
-    
 
-    
+
+
+
+
+
+
+
+
+
+
 
 

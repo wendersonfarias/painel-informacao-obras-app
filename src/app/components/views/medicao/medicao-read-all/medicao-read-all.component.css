@@ -1,24 +1,28 @@
-.content{
+.create{
     width: 90%;
-    margin: 1.4rem auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-
-    color: black;
+.create h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+.create button{
+    width: 100%;
+    margin: 1rem auto;
+}
+.container{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+table {
+    width: 100%;
+    
 }
 
-
-.cor{
-    color: black;
-    justify-items: center;
-}
 button{
-    margin-bottom: .8rem;
     color: green;
 }
 
@@ -30,7 +34,11 @@ button{
 .mat-header{
     width: 5rem;
 }
+
+
+
 .delete{
     margin-left: 0.6rem;
     color: rgb(228, 56, 56);
 }
+

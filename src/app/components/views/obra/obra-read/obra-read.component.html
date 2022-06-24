@@ -1,86 +1,74 @@
-<div class="content">
-  <div class="title">
-    <h1>Obras</h1>
-  </div>
-
-  <button
-    class="mat-elevation-z5"
-    (click)="navegarParaObraCreate()"
-    mat-raised-button
-    color="green"
-  >
-    Nova Obra
+<div class="create">
+  <h1>Obras</h1>
+  <button class="mat-elevation-z8" (click)="navegarParaObraCreate()" mat-stroked-button >
+    Criar Nova Obra
   </button>
+</div>
 
-  <div class="mat-elevation-z5 content-table">
-    <table class="table" mat-table [dataSource]="obras">
+<div class="mat-elevation-z8 container">
 
-      <!-- Name Column -->
-      <ng-container matColumnDef="abrir">
-        <th mat-header-cell *matHeaderCellDef>VISUALIZAR</th>
-        <td mat-cell *matCellDef="let row">
-          <a class="abrir" routerLink="visualizar/{{row.id}}">
-            <i class="material-icons">open_in_new</i>
-          </a>
-          Abrir
-        </td>
-      </ng-container>
+  <table mat-table [dataSource]="dataSource">
 
-      <!-- Name Column -->
-      <ng-container matColumnDef="nomeObra">
-        <th mat-header-cell *matHeaderCellDef>OBRAS</th>
-        <td mat-cell *matCellDef="let row">{{ row.nomeObra }}</td>
-      </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="abrir">
+      <th mat-header-cell *matHeaderCellDef>VISUALIZAR</th>
+      <td mat-cell *matCellDef="let row">
+        <a class="abrir" routerLink="visualizar/{{row.id}}">
+          <i class="material-icons">open_in_new</i>
+        </a>
+        <a routerLink="visualizar/{{row.id}}"> Abrir</a>
+      </td>
+    </ng-container>
 
-      <!-- Weight Column -->
-      <ng-container matColumnDef="numeroContrato">
-        <th mat-header-cell *matHeaderCellDef>Contrato</th>
-        <td mat-cell *matCellDef="let row">{{ row.numeroContrato }}</td>
-      </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="nomeObra">
+      <th mat-header-cell *matHeaderCellDef>OBRAS</th>
+      <td mat-cell *matCellDef="let row">{{ row.nomeObra }}</td>
+    </ng-container>
 
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="empresaExecutora">
-        <th mat-header-cell *matHeaderCellDef>Empresa</th>
-        <td mat-cell *matCellDef="let row">{{ row.empresaExecutora }}</td>
-      </ng-container>
+    <!-- Weight Column -->
+    <ng-container matColumnDef="numeroContrato">
+      <th mat-header-cell *matHeaderCellDef>Contrato</th>
+      <td mat-cell *matCellDef="let row">{{ row.numeroContrato }}</td>
+    </ng-container>
 
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="prazoExecucao">
-        <th mat-header-cell *matHeaderCellDef>Prazo de Execução</th>
-        <td class="prazo" mat-cell *matCellDef="let row">
-          {{ row.prazoExecucao }}
-        </td>
-      </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="empresaExecutora">
+      <th mat-header-cell *matHeaderCellDef>Empresa</th>
+      <td mat-cell *matCellDef="let row">{{ row.empresaExecutora }}</td>
+    </ng-container>
 
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="valorExecucaoObra">
-        <th mat-header-cell *matHeaderCellDef>Valor obra</th>
-        <td mat-cell *matCellDef="let row">{{ row.valorExecucaoObra }}</td>
-      </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="prazoExecucao">
+      <th mat-header-cell *matHeaderCellDef>Prazo de Execução</th>
+      <td class="prazo" mat-cell *matCellDef="let row">
+        {{ row.prazoExecucao }}
+      </td>
+    </ng-container>
 
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="valorLiberado">
-        <th mat-header-cell *matHeaderCellDef>Valor Liberado</th>
-        <td mat-cell *matCellDef="let row">{{ row.valorLiberado }}</td>
-      </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="valorExecucaoObra">
+      <th mat-header-cell *matHeaderCellDef>Valor de Execução</th>
+      <td mat-cell *matCellDef="let row">{{ row.valorExecucaoObra }}</td>
+    </ng-container>
 
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="acoes">
-        <th class="mat-header" mat-header-cell *matHeaderCellDef>AÇÕES</th>
-        <td mat-cell *matCellDef="let row">
-          <a class="edit" routerLink="update/{{ row.id }}">
-            <i class="material-icons">edit</i>
-          </a>
-          <a class="delete" routerLink="delete/{{ row.id }}">
-            <i class="material-icons">delete</i>
-          </a>
-        </td>
-      </ng-container>
+    <!-- Symbol Column -->
 
-      <!-- Symbol Column -->
+    <ng-container matColumnDef="valorLiberado">
+      <th mat-header-cell *matHeaderCellDef>Valor Liberado</th>
+      <td mat-cell *matCellDef="let row">{{ row.valorLiberado }}</td>
+    </ng-container>          
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-    </table>
-  </div>
+  <mat-paginator [pageSizeOptions]="[5]"
+                 showFirstLastButtons 
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>
+<div class="create">
+  <button class="mat-elevation-z8" (click)="voltar()" mat-stroked-button color="primary" >
+    VOLTAR
+  </button>
 </div>

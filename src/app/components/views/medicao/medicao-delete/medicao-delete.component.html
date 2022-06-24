@@ -15,21 +15,21 @@
                 <!-- Input Valor Medido -->
                 <mat-form-field class="form">
                     <mat-label>Valor Medido</mat-label>
-                    <input matInput [(ngModel)]="medicao.valorMedido" type="number" name="valor" disabled>
+                    <input class="cor" matInput [(ngModel)]="medicao.valorMedido" type="number" name="valor" disabled>
 
                 </mat-form-field>
 
                  <!-- Input Numero da Medição -->
                  <mat-form-field class="form">
                     <mat-label>Numero da Medição</mat-label>
-                    <input [(ngModel)]="medicao.numeroMedicao" matInput id="numMed" type="number" name="numMed" disabled >
+                    <input class="cor" [(ngModel)]="medicao.numeroMedicao" matInput id="numMed" type="number" name="numMed" disabled >
                                     
                 </mat-form-field>
 
                  <!-- Input Valor Medido -->
                  <mat-form-field class="form">
                     <mat-label>Mês da Medição</mat-label>
-                    <input matInput [(ngModel)]="medicao.mesMedicao" id="mesMed" type="month" name="mesMed" disabled>
+                    <input class="cor" matInput [(ngModel)]="medicao.mesMedicao" id="mesMed" type="month" name="mesMed" disabled>
                 </mat-form-field>
 
 
@@ -38,8 +38,8 @@
                    
                 <!--Botões-->
                 <div class="buttons">
-                    <button   (click)="delete()" mat-raised-button color="warn"> DELETAR </button>
-                    <button  (click)="cancelar()" class="mat-elevation-z100"  mat-raised-button  color="primary"> CANCELAR </button>
+                    <button  (click)="delete()" mat-raised-button color="warn"> DELETAR </button>
+                    <button  (click)="cancelar()" class="mat-elevation-z10"  mat-raised-button  color="primary"> CANCELAR </button>
                 </div>
 
             </mat-card-title>

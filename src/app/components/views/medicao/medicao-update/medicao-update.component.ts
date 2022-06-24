@@ -45,7 +45,7 @@ export class MedicaoUpdateComponent implements OnInit {
       this.service.mensagem("Medição atualizada com sucesso!")
     }, err =>{
       this.router.navigate([`obras/${this.id_obra}/medicoes`]);
-      this.service.mensagem("Falha ao atualizar a Medição! Tente Novamente...")
+      this.service.mensagem("Falha ao atualizar a Medição! Tente Novamente mais tarde...")
     })
   }
 

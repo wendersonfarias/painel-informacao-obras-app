@@ -30,6 +30,8 @@ import { MedicaoReadAllComponent } from './components/views/medicao/medicao-read
 import { MedicaoCreateComponent } from './components/views/medicao/medicao-create/medicao-create.component';
 import { MedicaoUpdateComponent } from './components/views/medicao/medicao-update/medicao-update.component';
 import { MedicaoDeleteComponent } from './components/views/medicao/medicao-delete/medicao-delete.component';
+import { NgxChartsModule } from "@swimlane/ngx-charts";
+
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, ObraReadComponent, ObraCreateComponent, ObraDeleteComponent, ObraUpdateComponent, ObraVisualizaComponent, MedicaoReadAllComponent, MedicaoCreateComponent, MedicaoUpdateComponent, MedicaoDeleteComponent],
@@ -50,7 +52,8 @@ import { MedicaoDeleteComponent } from './components/views/medicao/medicao-delet
     MatFormFieldModule,
     MatSnackBarModule,
     MatPaginatorModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -4,5 +4,13 @@
 }
 
 i {
-    padding-right: .6rem;
+    margin-right: 1rem;
+}
+
+.sideNav{
+    background-color: #e1e2e1b8;
+}
+
+button {
+    margin: 1rem auto 0 1rem;
 }

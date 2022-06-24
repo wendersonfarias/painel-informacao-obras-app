@@ -20,6 +20,7 @@ export class ObraVisualizaComponent implements OnInit {
     qtdAditivoPrazo: 0,
     qtdAditivoValor: 0,
     prazoExecucao: 0,
+    valorLiberado: 0
   };
 
   constructor(
@@ -41,6 +42,10 @@ export class ObraVisualizaComponent implements OnInit {
 
   verMedicoes(): void {
     this.router.navigate([`obras/${this.obra.id}/medicoes`]);
+    
+  }
+  voltar(): void {
+    this.router.navigate([`obras/`]);
     
   }
 }

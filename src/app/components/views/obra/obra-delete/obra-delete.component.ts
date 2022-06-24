@@ -21,6 +21,7 @@ export class ObraDeleteComponent implements OnInit {
     qtdAditivoPrazo : 0,
     qtdAditivoValor: 0,
     prazoExecucao: 0,
+    valorLiberado: 0.0,
   };
   constructor(private service: ObraService, private route: ActivatedRoute, private router:Router) { }
 

@@ -6,6 +6,7 @@ export interface Obra{
    nomeFiscal: string;
    processo : string;
    valorExecucaoObra: number;
+   valorLiberado: number;
    qtdAditivoPrazo : number;
    qtdAditivoValor: number;
    prazoExecucao: number;

@@ -9,17 +9,9 @@
                 <!-- Titulo-->
                 <div class="titulo ">
                     <h1>
-                        <input class="cor" matInput [(ngModel)]="obra.nomeObra" type="text" name="nome" placeholder="Ex. obra da sesp" disabled>
+                        {{obra.nomeObra}}
                     </h1>
                 </div>
-
-                <!-- Input Nome da obra
-                <mat-form-field class="form">
-                    <mat-label>Nome da obra</mat-label>
-                    <input class="cor" matInput [(ngModel)]="obra.nomeObra" type="text" name="nome" placeholder="Ex. obra da sesp" disabled>
-                </mat-form-field>
-                 -->
-
 
                 <!-- Input Numero de Contrato -->
                 <mat-form-field class="form">
@@ -30,13 +22,7 @@
                 <!-- Input Empresa Executora -->
                 <mat-form-field class="form">
                     <mat-label>Empresa Executora</mat-label>
-                    <input class="cor" matInput [(ngModel)]="obra.empresaExecutora" type="text" name="empresa" placeholder="Ex. Constru Paulo" disabled>
-                </mat-form-field>
-
-                <!-- Input Valor de Execução da Obra -->
-                <mat-form-field class="form">
-                    <mat-label>Valor de Execução da Obra</mat-label>
-                    <input class="cor" matInput [(ngModel)]="obra.valorExecucaoObra" type="number"  name="valor-obra" placeholder="Ex. 9090.52" min="0" step="0.01" disabled>
+                    <input class="cor espaco" matInput [(ngModel)]="obra.empresaExecutora" type="text" name="empresa" placeholder="Ex. Constru Paulo" disabled>
                 </mat-form-field>
 
 
@@ -47,12 +33,28 @@
                 </mat-form-field>
 
 
+                <!-- Input Valor de Execução da Obra -->
+                <mat-form-field class="form">
+                    <mat-label>Valor de Execução</mat-label>
+                    <input class="cor" matInput [(ngModel)]="obra.valorExecucaoObra" type="number"  name="valor-obra" placeholder="Ex. 9090.52" min="0" step="0.01" disabled>
+                </mat-form-field>
+
+                <!-- Input Valor Liberado da Obra -->
+                <mat-form-field class="form">
+                    <mat-label>Valor Liberado</mat-label>
+                    <input class="cor" matInput [(ngModel)]="obra.valorLiberado" type="number"  name="valor-liberado" disabled>
+                </mat-form-field>
+
+
+                
+
+
                 
                    
                 <!--Botões-->
                 <div class="buttons">
                     <button (click)="verMedicoes()" mat-raised-button color="primary"> VER MEDIÇÕES </button>
-                    <button  class="mat-elevation-z100"  mat-raised-button color="warn"> VOLTAR </button>
+                    <button (click)="voltar()" class="mat-elevation-z100"  mat-raised-button color="warn"> VOLTAR </button>
                 </div>
 
             </mat-card-title>

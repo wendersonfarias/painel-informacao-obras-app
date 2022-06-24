@@ -24,6 +24,11 @@ h1{
     width: 30%;
 }
 
+.cor{
+    font-weight: 400;
+    color: black;
+}
+
 
 .buttons{
     padding-left: 1rem;

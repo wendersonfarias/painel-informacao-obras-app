@@ -1,4 +1,19 @@
-<mat-card class="home mat-elevation-z4">
-    <mat-card-title class="title">Bem Vindo!</mat-card-title>
-    <mat-card-subtitle class="subtitle">Paineis de Obras</mat-card-subtitle>
+<mat-card class="home mat-elevation-z8">
+    <mat-card-header>
+        <mat-card-title class="title">Bem Vindo ao Painel de Obras da SESP!</mat-card-title>
+        <mat-card-subtitle class="subtitle">Paineis de Obras</mat-card-subtitle>
+
+
+        <ngx-charts-number-card
+        
+            [view]="view"
+            [results]="data"
+            [cardColor]="cardColor">
+        </ngx-charts-number-card>
+    </mat-card-header>
+
+    
 </mat-card>
+
+
+
